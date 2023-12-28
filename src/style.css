@@ -1,7 +1,66 @@
+body {
+  font-family: "Lexend", sans-serif;
+  background: #fbebee;
+}
+
 h1 {
   text-align: center;
+  font-family: "Sacramento", cursive;
+  font-size: 90px;
+  margin-bottom: -47px;
+  color: #633595;
+}
+
+h2 {
+  margin-bottom: 0px;
+}
+
+select {
+  width: 100%;
+  font-size: 16px;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.container {
+  display: block;
+  margin: 60px auto;
+  margin-top: 0px;
+  padding: 20px;
+  border: 3px solid #633595;
+  border-radius: 20px;
+  max-width: 600px;
+  box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.4);
+  background: #fff;
+}
+
+.city {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 2px dashed #633595;
+}
+
+.city:last-child {
+  border-bottom: none;
+}
+.date {
+  margin-bottom: 10px;
+  color: rgba(0, 0, 0, 0.4);
+}
+
+.time {
+  font-size: 32px;
+  margin: auto 0px;
+}
+.time small {
+  font-size: 20px;
 }
 
 footer {
   text-align: center;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+a:hover {
+  color: blue;
 }
