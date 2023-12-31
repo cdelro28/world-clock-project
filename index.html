@@ -24,13 +24,28 @@
     <div class="container">
       <select name="" id="city-select">
         <option value="">Select a city...</option>
+        <option value="current">My current location timezone</option>
+        <option value="America/Argentina/San_Juan">Argentina</option>
+        <option value="Pacific/Auckland">Auckland</option>
+        <option value="Africa/Cairo">Cairo</option>
+        <option value="Asia/Dubai">Dubai</option>
+        <option value="Pacific/Honolulu">Honolulu</option>
+        <option value="Europe/London">London</option>
         <option value="America/Vancouver">Seattle</option>
+        <option value="Asia/Shanghai">Shanghai</option>
         <option value="Australia/Sydney">Sydney</option>
         <option value="Asia/Tokyo">Tokyo</option>
-        <option value="Pacific/Honolulu">Honolulu</option>
       </select>
 
       <div class="cities" id="city-update">
+        <div class="city" id="paris">
+          <div>
+            <h2>🇫🇷 Paris</h2>
+            <div class="date"></div>
+          </div>
+          <div class="time"></div>
+        </div>
+
         <div class="city" id="seattle">
           <div>
             <h2>🇺🇸 Seattle</h2>
@@ -42,6 +57,14 @@
         <div class="city" id="sydney">
           <div>
             <h2>🇦🇺 Sydney</h2>
+            <div class="date"></div>
+          </div>
+          <div class="time"></div>
+        </div>
+
+        <div class="city" id="hong-kong">
+          <div>
+            <h2>🇨🇳 Hong Kong</h2>
             <div class="date"></div>
           </div>
           <div class="time"></div>

@@ -1,4 +1,12 @@
 function showCityTime() {
+  let parisElement = document.querySelector("#paris");
+  let parisDateElement = parisElement.querySelector(".date");
+  let parisTimeElement = parisElement.querySelector(".time");
+  let parisTime = moment().tz("Europe/Paris");
+
+  parisDateElement.innerHTML = parisTime.format("MMMM Do YYYY");
+  parisTimeElement.innerHTML = parisTime.format("hh:mm:ss [<small>]A[<small>]");
+
   let seattleElement = document.querySelector("#seattle");
   let seattleDateElement = seattleElement.querySelector(".date");
   let seattleTimeElement = seattleElement.querySelector(".time");
@@ -18,14 +26,31 @@ function showCityTime() {
   sydneyTimeElement.innerHTML = sydneyTime.format(
     "hh:mm:ss [<small>]A[<small>]"
   );
+
+  let hongKongElement = document.querySelector("#hong-kong");
+  let hongKongDateElement = hongKongElement.querySelector(".date");
+  let hongKongTimeElement = hongKongElement.querySelector(".time");
+  let hongKongTime = moment().tz("Asia/Hong_Kong");
+
+  hongKongDateElement.innerHTML = hongKongTime.format("MMMM Do YYYY");
+  hongKongTimeElement.innerHTML = hongKongTime.format(
+    "hh:mm:ss [<small>]A[<small>]"
+  );
 }
+
 showCityTime();
 setInterval(showCityTime, 1000);
 
 function updateCity(event) {
   setInterval(() => {
     let cityTimeZone = event.target.value;
-    let cityName = cityTimeZone.split("/")[1].replace("Vancouver", "Seattle");
+    if (cityTimeZone === "current") {
+      cityTimeZone = moment.tz.guess();
+    }
+    let cityName = cityTimeZone
+      .split("/")[1]
+      .replace("Vancouver", "Seattle")
+      .replace("_", " ");
 
     let cityTime = moment().tz(cityTimeZone).format("hh:mm:ss");
     let cityDate = moment().tz(cityTimeZone).format("MMMM Do YYYY");
