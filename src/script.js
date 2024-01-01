@@ -65,6 +65,10 @@ function updateCity(event) {
       .tz(cityTimeZone)
       .format("A")}</small></div>
     </div>
+
+    <div class="city-list">
+        <a href="/">city list</a>
+      </div>
 `;
   }, 1000);
 }
